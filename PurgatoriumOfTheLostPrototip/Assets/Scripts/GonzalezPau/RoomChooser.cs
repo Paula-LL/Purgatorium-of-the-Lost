@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RoomChooser : MonoBehaviour
+{
+    enum salida { DERECHA, IZQUIERDA, ARRIBA , ABAJO}
+    salida puertaSalida = salida.DERECHA;
+    [SerializeField] GameObject salaActual;
+    [SerializeField] GameObject sala2PuertasLineal;
+    [SerializeField] Collider sala2PuertasLineal1;
+    [SerializeField] Collider sala2PuertasLineal2;
+    [SerializeField] GameObject sala2PuertasGrados; 
+    [SerializeField] Collider sala2PuertasGrados1;
+    [SerializeField] Collider sala2PuertasGrados2;
+    [SerializeField] GameObject sala3Puertas;
+    [SerializeField] GameObject sala4Puertas;
+
+    int randomSala;
+    int contadorSalasVisitadas = 1;
+    void cargarSiguienteSala()
+    {
+        switch (puertaSalida)
+        {
+            case salida.DERECHA:
+                salaActual.SetActive(false);
+                randomSala = Mathf.RoundToInt(Random.Range(1, 4));
+                if (randomSala == 1)
+                {
+                    Instantiate(sala2PuertasLineal,salaActual.transform.position, Quaternion.identity);
+                    salaActual = sala2PuertasLineal;
+                }else if (randomSala == 2)
+                {
+                    Instantiate(sala2PuertasGrados,salaActual.transform.position,Quaternion.identity);
+                    salaActual = sala2PuertasGrados;
+                }else if (randomSala == 3)
+                {
+                    Instantiate(sala3Puertas, salaActual.transform.position,Quaternion.identity);
+                    salaActual= sala3Puertas;
+                }else if(randomSala == 4)
+                {
+                    Instantiate(sala4Puertas, salaActual.transform.position, Quaternion.identity);
+                    salaActual = sala4Puertas;
+                }
+                contadorSalasVisitadas++;
+                break;
+            case salida.IZQUIERDA:
+                break;
+            case salida.ARRIBA:
+                break;
+            case salida.ABAJO:
+                break;
+        }
+    }
+}
