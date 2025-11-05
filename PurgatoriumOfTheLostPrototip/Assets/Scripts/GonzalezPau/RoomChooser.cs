@@ -14,11 +14,19 @@ public class RoomChooser : MonoBehaviour
     [SerializeField] Collider sala2PuertasGrados1;
     [SerializeField] Collider sala2PuertasGrados2;
     [SerializeField] GameObject sala3Puertas;
+    [SerializeField] Collider sala3Puertas1;
+    [SerializeField] Collider sala3Puertas2;
+    [SerializeField] Collider sala3Puertas3;
     [SerializeField] GameObject sala4Puertas;
+    [SerializeField] Collider sala4Puertas1;
+    [SerializeField] Collider sala4Puertas2;
+    [SerializeField] Collider sala4Puertas3;
+    [SerializeField] Collider sala4Puertas4;
+    [SerializeField] GameObject Player;
 
     int randomSala;
     int contadorSalasVisitadas = 1;
-    void cargarSiguienteSala()
+    public void cargarSiguienteSala()
     {
         switch (puertaSalida)
         {
@@ -29,18 +37,24 @@ public class RoomChooser : MonoBehaviour
                 {
                     Instantiate(sala2PuertasLineal,salaActual.transform.position, Quaternion.identity);
                     salaActual = sala2PuertasLineal;
+                    Player.transform.position = sala2PuertasLineal1.transform.position + new Vector3(0.5f, 0, 0);
+
                 }else if (randomSala == 2)
                 {
                     Instantiate(sala2PuertasGrados,salaActual.transform.position,Quaternion.identity);
                     salaActual = sala2PuertasGrados;
+                    Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(0.5f, 0, 0);
                 }else if (randomSala == 3)
                 {
                     Instantiate(sala3Puertas, salaActual.transform.position,Quaternion.identity);
                     salaActual= sala3Puertas;
-                }else if(randomSala == 4)
+                    Player.transform.position = sala3Puertas1.transform.position + new Vector3(0.5f, 0, 0);
+                }
+                else if(randomSala == 4)
                 {
                     Instantiate(sala4Puertas, salaActual.transform.position, Quaternion.identity);
                     salaActual = sala4Puertas;
+                    Player.transform.position = sala4Puertas1.transform.position + new Vector3(0.5f, 0, 0);
                 }
                 contadorSalasVisitadas++;
                 break;
