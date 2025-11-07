@@ -122,38 +122,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &197362182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-  m_PrefabInstance: {fileID: 1838356670}
+--- !u!65 &137052698 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8619348788241482699, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1753403058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &197362187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!65 &200278882 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3096361609743877303, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 980757900}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197362182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puertaEncontrada:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 451839237}
-        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
-        m_MethodName: cargarSiguienteSala
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &227099498
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +145,7 @@ GameObject:
   - component: {fileID: 227099501}
   - component: {fileID: 227099500}
   - component: {fileID: 227099499}
+  - component: {fileID: 227099504}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -283,26 +262,49 @@ Transform:
   m_GameObject: {fileID: 227099498}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12.2, z: 0}
+  m_LocalPosition: {x: 40.1, y: 125, z: 12.8}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &234488281 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3096361609743877303, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
-  m_PrefabInstance: {fileID: 640294892}
+--- !u!136 &227099504
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &241430063 stripped
+  m_GameObject: {fileID: 227099498}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &250822602 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 1886519083139852620, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
-  m_PrefabInstance: {fileID: 640294892}
+  m_CorrespondingSourceObject: {fileID: 2528042228710175516, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 534450732}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &380039738 stripped
+--- !u!65 &389075999 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 2055894910055709658, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
-  m_PrefabInstance: {fileID: 1113072721}
+  m_CorrespondingSourceObject: {fileID: 7351039536664387649, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 534450732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &413531221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5915079281721925564, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 980757900}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &451839234
 GameObject:
@@ -348,24 +350,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cc6b25a1a8494459b588feda16ea23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salaActual: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+  salaInicial: {fileID: 1728787356}
   sala2PuertasLineal: {fileID: 5915079281721925564, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
-  sala2PuertasLineal1: {fileID: 234488281}
-  sala2PuertasLineal2: {fileID: 241430063}
+  sala2PuertasLineal1: {fileID: 1213165695}
+  sala2PuertasLineal2: {fileID: 200278882}
   sala2PuertasGrados: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
-  sala2PuertasGrados1: {fileID: 380039738}
-  sala2PuertasGrados2: {fileID: 826366482}
+  sala2PuertasGrados1: {fileID: 2055936770}
+  sala2PuertasGrados2: {fileID: 1213165695}
   sala3Puertas: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
-  sala3Puertas1: {fileID: 1070006151}
-  sala3Puertas2: {fileID: 1995847278}
-  sala3Puertas3: {fileID: 813227561}
+  sala3Puertas1: {fileID: 1298602890}
+  sala3Puertas2: {fileID: 800320964}
+  sala3Puertas3: {fileID: 137052698}
   sala4Puertas: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
-  sala4Puertas1: {fileID: 1584376635}
-  sala4Puertas2: {fileID: 1259408615}
-  sala4Puertas3: {fileID: 1259408615}
-  sala4Puertas4: {fileID: 1045130833}
+  sala4Puertas1: {fileID: 250822602}
+  sala4Puertas2: {fileID: 389075999}
+  sala4Puertas3: {fileID: 494496473}
+  sala4Puertas4: {fileID: 858766610}
   Player: {fileID: 227099498}
---- !u!1001 &640294892
+  salasRef:
+  - {fileID: 965975586}
+  - {fileID: 413531221}
+  - {fileID: 955532286}
+  - {fileID: 1887082539}
+--- !u!65 &494496473 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4819725247484539917, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 534450732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &534450732
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -373,55 +385,142 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_Name
+      value: Sala4Puertas Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656962896558934375, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -183.5
+      value: -4.22
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 679.52094
+    - target: {fileID: 2894097525580882609, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.97
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 3339954851958507992, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -98.09072
+      value: 4.16
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 5372974647315456189, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5915079281721925564, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
-      propertyPath: m_Name
-      value: Sala2PuertasEnLinea Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1887082544}
+  m_SourcePrefab: {fileID: 100100000, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+--- !u!1001 &545119096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_Name
+      value: Sala1Puerta Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1728787361}
+  m_SourcePrefab: {fileID: 100100000, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,17 +615,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!65 &813227561 stripped
+--- !u!65 &800320964 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4526684943124946894, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
-  m_PrefabInstance: {fileID: 1670191397}
+  m_CorrespondingSourceObject: {fileID: 3988756158147955226, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1753403058}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &826366482 stripped
+--- !u!65 &858766610 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 8174833298115651965, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
-  m_PrefabInstance: {fileID: 1113072721}
+  m_CorrespondingSourceObject: {fileID: 3517839379252214850, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 534450732}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &834191979
+--- !u!1001 &938981003
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -534,55 +633,94 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
-      propertyPath: m_Name
-      value: Sala4Puertas Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -182.5
+      value: 21.3
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 694.65125
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.2
+      value: 12.8
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8025192955551564800, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: m_Name
+      value: Sala2PuertasEn90Grados Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 965975591}
+  m_SourcePrefab: {fileID: 100100000, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+--- !u!1 &955532286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1753403058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &955532291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955532286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puertaEncontrada:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 451839237}
+        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
+        m_MethodName: cargarSiguienteSala
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,17 +813,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90.81201, y: 0, z: 0}
---- !u!65 &1045130833 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 2528042228710175516, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
-  m_PrefabInstance: {fileID: 834191979}
+--- !u!1 &965975586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+  m_PrefabInstance: {fileID: 938981003}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1070006151 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 8619348788241482699, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
-  m_PrefabInstance: {fileID: 1670191397}
+--- !u!114 &965975591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1113072721
+  m_GameObject: {fileID: 965975586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puertaEncontrada:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 451839237}
+        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
+        m_MethodName: cargarSiguienteSala
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1001 &980757900
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -693,66 +853,102 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -181.7
+      value: 21.3
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 574.83527
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -132.0611
+      value: 12.8
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425603378919776724, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 2109069666768779953, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+    - target: {fileID: 5915079281721925564, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_Name
-      value: Sala2PuertasEn90Grados Variant
+      value: Sala2PuertasEnLinea Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915079281721925564, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
---- !u!65 &1259408615 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+--- !u!65 &1213165695 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 7351039536664387649, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
-  m_PrefabInstance: {fileID: 834191979}
+  m_CorrespondingSourceObject: {fileID: 1886519083139852620, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 980757900}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1584376635 stripped
+--- !u!65 &1298602890 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3517839379252214850, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
-  m_PrefabInstance: {fileID: 834191979}
+  m_CorrespondingSourceObject: {fileID: 4526684943124946894, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1753403058}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1670191397
+--- !u!1 &1728787356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+  m_PrefabInstance: {fileID: 545119096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1728787361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728787356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puertaEncontrada:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 451839237}
+        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
+        m_MethodName: cargarSiguienteSala
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1001 &1753403058
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -766,15 +962,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6336178489868854750, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -183.7
+      value: 21.3
       objectReference: {fileID: 0}
     - target: {fileID: 6336178489868854750, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 648.7774
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6336178489868854750, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -214.6126
+      value: 12.8
       objectReference: {fileID: 0}
     - target: {fileID: 6336178489868854750, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -803,76 +999,51 @@ PrefabInstance:
     - target: {fileID: 6336178489868854750, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
---- !u!1001 &1838356670
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      propertyPath: m_Name
-      value: Sala1Puerta Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 197362187}
-  m_SourcePrefab: {fileID: 100100000, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
---- !u!65 &1995847278 stripped
+      addedObject: {fileID: 955532291}
+  m_SourcePrefab: {fileID: 100100000, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+--- !u!1 &1887082539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 534450732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1887082544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887082539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puertaEncontrada:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 451839237}
+        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
+        m_MethodName: cargarSiguienteSala
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &2055936770 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3988756158147955226, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
-  m_PrefabInstance: {fileID: 1670191397}
+  m_CorrespondingSourceObject: {fileID: 2055894910055709658, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+  m_PrefabInstance: {fileID: 938981003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -882,8 +1053,8 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 451839236}
   - {fileID: 227099503}
-  - {fileID: 1838356670}
-  - {fileID: 1113072721}
-  - {fileID: 640294892}
-  - {fileID: 1670191397}
-  - {fileID: 834191979}
+  - {fileID: 545119096}
+  - {fileID: 938981003}
+  - {fileID: 980757900}
+  - {fileID: 1753403058}
+  - {fileID: 534450732}

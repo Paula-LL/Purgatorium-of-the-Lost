@@ -6,7 +6,8 @@ public class RoomChooser : MonoBehaviour
 {
     enum salida { DERECHA, IZQUIERDA, ARRIBA , ABAJO}
     salida puertaSalida = salida.DERECHA;
-    [SerializeField] GameObject salaActual;
+    [SerializeField] GameObject salaInicial;
+    GameObject salaActual;
     [SerializeField] GameObject sala2PuertasLineal;
     [SerializeField] Collider sala2PuertasLineal1;
     [SerializeField] Collider sala2PuertasLineal2;
@@ -26,6 +27,17 @@ public class RoomChooser : MonoBehaviour
 
     int randomSala;
     int contadorSalasVisitadas = 1;
+
+    public GameObject[] salasRef;
+
+    public void Start()
+    {
+        foreach (GameObject go in salasRef)
+        {
+            go.SetActive(false);
+        }
+        salaActual = salaInicial;
+    }
     public void cargarSiguienteSala()
     {
         switch (puertaSalida)
@@ -41,12 +53,12 @@ public class RoomChooser : MonoBehaviour
 
                 }else if (randomSala == 2)
                 {
-                    Instantiate(sala2PuertasGrados,salaActual.transform.position,Quaternion.identity);
+                    Instantiate(sala2PuertasGrados,salaActual.transform.position, Quaternion.identity);
                     salaActual = sala2PuertasGrados;
                     Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(0.5f, 0, 0);
                 }else if (randomSala == 3)
                 {
-                    Instantiate(sala3Puertas, salaActual.transform.position,Quaternion.identity);
+                    Instantiate(sala3Puertas, salaActual.transform.position, Quaternion.identity);
                     salaActual= sala3Puertas;
                     Player.transform.position = sala3Puertas1.transform.position + new Vector3(0.5f, 0, 0);
                 }

@@ -748,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sala2PuertasEn90Grados Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3788659058393112018, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8918952053365373151, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.95554
