@@ -906,17 +906,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sala3Puertas Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3788659058393112018, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8918952053365373151, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918952053365373151, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 145.8445
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918952053365373151, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -86.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918952053365373151, guid: a319656beb0657d478eeaa0a494c5e14, type: 3}
       propertyPath: m_LocalRotation.w

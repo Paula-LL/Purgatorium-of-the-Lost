@@ -405,6 +405,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 4.16
       objectReference: {fileID: 0}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: roomChooser
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cargarSiguienteSala
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomChooser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3515579267648195322, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5372974647315456189, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.12
@@ -452,10 +484,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1887082544}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
 --- !u!1001 &545119096
 PrefabInstance:
@@ -505,6 +534,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: roomChooser
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cargarSiguienteSala
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomChooser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094492026691885195, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
       propertyPath: m_Name
       value: Sala1Puerta Variant
@@ -516,10 +577,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1728787361}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -673,6 +731,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: roomChooser
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cargarSiguienteSala
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomChooser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502884683054346030, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_Name
       value: Sala2PuertasEn90Grados Variant
@@ -684,43 +774,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 965975591}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
 --- !u!1 &955532286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
   m_PrefabInstance: {fileID: 1753403058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &955532291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955532286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puertaEncontrada:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 451839237}
-        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
-        m_MethodName: cargarSiguienteSala
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,33 +878,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
   m_PrefabInstance: {fileID: 938981003}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &965975591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965975586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puertaEncontrada:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 451839237}
-        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
-        m_MethodName: cargarSiguienteSala
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &980757900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,6 +926,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: roomChooser
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cargarSiguienteSala
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomChooser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814916994567877707, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5915079281721925564, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
       propertyPath: m_Name
       value: Sala2PuertasEnLinea Variant
@@ -921,33 +986,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8264143603336803196, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
   m_PrefabInstance: {fileID: 545119096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1728787361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728787356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puertaEncontrada:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 451839237}
-        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
-        m_MethodName: cargarSiguienteSala
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &1753403058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -956,6 +994,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: roomChooser
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 451839237}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: cargarSiguienteSala
+      objectReference: {fileID: 0}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomChooser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 610323558129920804, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: puertaEncontrada.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_Name
       value: Sala3Puertas Variant
@@ -1003,43 +1073,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 955532291}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
 --- !u!1 &1887082539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
   m_PrefabInstance: {fileID: 534450732}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1887082544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887082539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac2e0dd7213aae41a8a1adfe22164b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puertaEncontrada:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 451839237}
-        m_TargetAssemblyTypeName: RoomChooser, Assembly-CSharp
-        m_MethodName: cargarSiguienteSala
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &2055936770 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2055894910055709658, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}

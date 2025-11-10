@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class RoomChooser : MonoBehaviour
 {
-    enum salida { DERECHA, IZQUIERDA, ARRIBA , ABAJO}
+    enum salida { DERECHA, IZQUIERDA, ARRIBA, ABAJO }
     salida puertaSalida = salida.DERECHA;
     [SerializeField] GameObject salaInicial;
     GameObject salaActual;
     [SerializeField] GameObject sala2PuertasLineal;
     [SerializeField] Collider sala2PuertasLineal1;
     [SerializeField] Collider sala2PuertasLineal2;
-    [SerializeField] GameObject sala2PuertasGrados; 
+    [SerializeField] GameObject sala2PuertasGrados;
     [SerializeField] Collider sala2PuertasGrados1;
     [SerializeField] Collider sala2PuertasGrados2;
     [SerializeField] GameObject sala3Puertas;
@@ -30,6 +31,39 @@ public class RoomChooser : MonoBehaviour
 
     public GameObject[] salasRef;
 
+    private static RoomChooser roomChooser;
+
+    public static RoomChooser instance
+    {
+        get
+        {
+            return RequestInstance();
+        }
+    }
+    private static RoomChooser RequestInstance()
+    {
+        if (roomChooser == null)
+        {
+            roomChooser = FindObjectOfType<RoomChooser>();
+            if (roomChooser == null)
+            {
+                GameObject roomChooserObject = new GameObject("RoomChooser");
+                roomChooser = roomChooserObject.AddComponent<RoomChooser>();
+            }
+        }
+        return roomChooser;
+    }
+    private void Awake()
+    {
+        if (roomChooser == null)
+        {
+            roomChooser = this;
+        }
+        else if (roomChooser != this)
+        {
+            Destroy(roomChooser.gameObject);
+        }
+    }
     public void Start()
     {
         foreach (GameObject go in salasRef)
@@ -47,26 +81,36 @@ public class RoomChooser : MonoBehaviour
                 randomSala = Mathf.RoundToInt(Random.Range(1, 4));
                 if (randomSala == 1)
                 {
-                    Instantiate(sala2PuertasLineal,salaActual.transform.position, Quaternion.identity);
+                    Instantiate(sala2PuertasLineal, salaActual.transform.position, Quaternion.identity);
                     salaActual = sala2PuertasLineal;
-                    Player.transform.position = sala2PuertasLineal1.transform.position + new Vector3(0.5f, 0, 0);
+                    sala2PuertasLineal.SetActive(true);
+                    sala2PuertasLineal1.gameObject.SetActive(false);
+                    Player.transform.position = sala2PuertasLineal1.transform.position + new Vector3(4f, 0, 0);
 
-                }else if (randomSala == 2)
+                }
+                else if (randomSala == 2)
                 {
-                    Instantiate(sala2PuertasGrados,salaActual.transform.position, Quaternion.identity);
+                    Instantiate(sala2PuertasGrados, salaActual.transform.position, Quaternion.identity);
                     salaActual = sala2PuertasGrados;
-                    Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(0.5f, 0, 0);
-                }else if (randomSala == 3)
+                    sala2PuertasGrados.SetActive(true);
+                    sala2PuertasGrados1.gameObject.SetActive(false);
+                    Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(5f, 0, 0);
+                }
+                else if (randomSala == 3)
                 {
                     Instantiate(sala3Puertas, salaActual.transform.position, Quaternion.identity);
-                    salaActual= sala3Puertas;
-                    Player.transform.position = sala3Puertas1.transform.position + new Vector3(0.5f, 0, 0);
+                    salaActual = sala3Puertas;
+                    sala3Puertas.SetActive(true);
+                    sala3Puertas1.gameObject.SetActive(false);  
+                    Player.transform.position = sala3Puertas1.transform.position + new Vector3(2f, 0, 0);
                 }
-                else if(randomSala == 4)
+                else if (randomSala == 4)
                 {
                     Instantiate(sala4Puertas, salaActual.transform.position, Quaternion.identity);
                     salaActual = sala4Puertas;
-                    Player.transform.position = sala4Puertas1.transform.position + new Vector3(0.5f, 0, 0);
+                    sala4Puertas.SetActive(true);
+                    sala4Puertas1.gameObject.SetActive (false);
+                    Player.transform.position = sala4Puertas1.transform.position + new Vector3(2f, 0, 0);
                 }
                 contadorSalasVisitadas++;
                 break;
