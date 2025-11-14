@@ -85,7 +85,7 @@ public class RoomChooser : MonoBehaviour
                     salaActual = sala2PuertasLineal;
                     sala2PuertasLineal.SetActive(true);
                     sala2PuertasLineal1.gameObject.SetActive(false);
-                    Player.transform.position = sala2PuertasLineal1.transform.position + new Vector3(4f, 0, 0);
+                    Player.transform.position = sala2PuertasLineal1.transform.position + new Vector3(2f, 0, 0);
 
                 }
                 else if (randomSala == 2)
@@ -94,7 +94,8 @@ public class RoomChooser : MonoBehaviour
                     salaActual = sala2PuertasGrados;
                     sala2PuertasGrados.SetActive(true);
                     sala2PuertasGrados1.gameObject.SetActive(false);
-                    Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(5f, 0, 0);
+                    Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(2f, 0, 0);
+                    puertaSalida = salida.ABAJO;
                 }
                 else if (randomSala == 3)
                 {
@@ -119,7 +120,46 @@ public class RoomChooser : MonoBehaviour
             case salida.ARRIBA:
                 break;
             case salida.ABAJO:
+                salaActual.SetActive(false);
+                randomSala = Mathf.RoundToInt(Random.Range(1, 4));
+                if (randomSala == 1)
+                {
+                    Instantiate(sala2PuertasLineal, salaActual.transform.position, Quaternion.Euler(0,90,0));
+                    salaActual = sala2PuertasLineal;
+                    sala2PuertasLineal.SetActive(true);
+                    sala2PuertasLineal1.gameObject.SetActive(false);
+                    Player.transform.position = sala2PuertasLineal1.transform.position + new Vector3(2f, 0, 0);
+                    puertaSalida = salida.ABAJO;
+
+                }
+                else if (randomSala == 2)
+                {
+                    Instantiate(sala2PuertasGrados, salaActual.transform.position, Quaternion.Euler(0, 90, 0));
+                    salaActual = sala2PuertasGrados;
+                    sala2PuertasGrados.SetActive(true);
+                    sala2PuertasGrados1.gameObject.SetActive(false);
+                    Player.transform.position = sala2PuertasGrados1.transform.position + new Vector3(2f, 0, 0);
+                    puertaSalida = salida.IZQUIERDA;
+                }
+                else if (randomSala == 3)
+                {
+                    Instantiate(sala3Puertas, salaActual.transform.position, Quaternion.identity);
+                    salaActual = sala3Puertas;
+                    sala3Puertas.SetActive(true);
+                    sala3Puertas1.gameObject.SetActive(false);
+                    Player.transform.position = sala3Puertas2.transform.position + new Vector3(2f, 0, 0);
+                }
+                else if (randomSala == 4)
+                {
+                    Instantiate(sala4Puertas, salaActual.transform.position, Quaternion.identity);
+                    salaActual = sala4Puertas;
+                    sala4Puertas.SetActive(true);
+                    sala4Puertas1.gameObject.SetActive(false);
+                    Player.transform.position = sala4Puertas2.transform.position + new Vector3(2f, 0, 0);
+                }
+                contadorSalasVisitadas++;
                 break;
+               
         }
     }
 }
