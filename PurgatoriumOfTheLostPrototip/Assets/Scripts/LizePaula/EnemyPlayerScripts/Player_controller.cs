@@ -1,14 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using static Player_controller;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player_controller : MonoBehaviour
 {
     [Header("Movimiento")]
-    public float moveSpeed = 5f;
-    public float dashSpeed = 20f;
-    public float dashDuration = 0.1f;
-    public float rotationSpeed = 10f; 
 
+    [SerializeField] Movement baseMovement = new Movement();
+    Movement currentMovement;
     [Header("Vida")]
     public int maxHealth = 5;
     private int currentHealth;
@@ -18,9 +19,12 @@ public class Player_controller : MonoBehaviour
     private bool isDashing = false;
     private float dashTimeLeft = 0f;
 
+    public List<MovementModifier> modifierMovementList = new List<MovementModifier>();
+
     void Start()
     {
-        controller = GetComponent<CharacterController>();  
+        currentMovement = new Movement(baseMovement);
+        controller = GetComponent<CharacterController>();
         currentHealth = maxHealth;
     }
 
@@ -42,7 +46,7 @@ public class Player_controller : MonoBehaviour
             if (moveDirection != Vector3.zero)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, currentMovement.rotationSpeed * Time.deltaTime);
             }
 
             // Dash
@@ -60,15 +64,20 @@ public class Player_controller : MonoBehaviour
             }
         }
 
-        float speed = isDashing ? dashSpeed : moveSpeed;
+        float speed = isDashing ? currentMovement.dashSpeed : currentMovement.moveSpeed;
         controller.Move(moveDirection * speed * Time.deltaTime);
     }
 
     void StartDash()
     {
         isDashing = true;
-        dashTimeLeft = dashDuration;
+        currentMovement = new Movement(baseMovement);
+        ApplyMovementModifiers(currentMovement);
+
+        dashTimeLeft = currentMovement.dashDuration;
     }
+
+
 
 
     public void TakeDamage(int amount)
@@ -87,4 +96,52 @@ public class Player_controller : MonoBehaviour
         Debug.Log("Jugador ha muerto");
         Destroy(gameObject);
     }
+
+    internal void AddModifier(MovementModifier cardsBuff)
+    {
+        modifierMovementList.Add(cardsBuff);
+    }
+
+    void ApplyMovementModifiers(Movement m)
+    {
+        foreach (MovementModifier modifier in modifierMovementList)
+        {
+            modifier.ApplyMovementModifier(m);
+        }
+    }
 }
+
+[System.Serializable]
+public class Movement
+{
+    public float moveSpeed = 5f;
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.1f;
+    public float rotationSpeed = 10f;
+
+    public Movement()
+    {
+        this.moveSpeed = 5f;
+        this.dashSpeed = 20f;
+        this.dashDuration = 0.1f;
+        this.rotationSpeed = 10f;
+    }
+
+    public Movement(float moveSpeed, float dashSpeed, float dashDuration, float rotationSpeed)
+    {
+        this.moveSpeed = 5f;
+        this.dashSpeed = 20f;
+        this.dashDuration = 0.1f;
+        this.rotationSpeed = 10f;
+    }
+
+    public Movement(Movement movement)
+    {
+        moveSpeed = movement.moveSpeed;
+        dashSpeed = movement.dashSpeed;
+        dashDuration = movement.dashDuration;
+        rotationSpeed = movement.rotationSpeed;
+    }
+}
+
+

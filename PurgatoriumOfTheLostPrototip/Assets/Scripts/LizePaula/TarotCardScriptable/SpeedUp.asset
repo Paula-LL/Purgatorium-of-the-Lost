@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d32e945292492a468874c8105aef0aa, type: 3}
-  m_Name: AttackUp
+  m_Script: {fileID: 11500000, guid: 44933038feff1c94085ab332c08abef7, type: 3}
+  m_Name: SpeedUp
   m_EditorClassIdentifier: 
-  attackUp1: 2
+  dashSpeedUp: 10

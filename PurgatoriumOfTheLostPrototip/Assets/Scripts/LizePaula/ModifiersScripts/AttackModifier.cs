@@ -4,5 +4,6 @@ using UnityEngine;
 
 public abstract class AttackModifier : ScriptableObject
 {
-    public abstract void ApplyModifier(Attack attack);
+    public abstract void ApplyAttackModifier(Attack attack);
+
 }

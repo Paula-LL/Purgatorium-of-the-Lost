@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -13,7 +14,8 @@ public class PlayerAttack : MonoBehaviour
     private Renderer rend;
     private Color originalColor;
     private LineRenderer lineRenderer;
-    public List<AttackModifier> modifierList = new List<AttackModifier>();
+    public List<AttackModifier> modifierAttackList = new List<AttackModifier>();
+
 
     void Start()
     {
@@ -32,9 +34,9 @@ public class PlayerAttack : MonoBehaviour
 
     void ApplyAttackModifiers(Attack a)
     {
-        foreach(AttackModifier modifier in modifierList)
+        foreach (AttackModifier modifier in modifierAttackList)
         {
-            modifier.ApplyModifier(a);
+            modifier.ApplyAttackModifier(a);
         }
     }
 
@@ -42,8 +44,6 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && !isAttacking)
         {
-
-
             isAttacking = true;
             attackTimer = baseAttack.attackDuration;
             rend.material.color = Color.red;
@@ -98,6 +98,11 @@ public class PlayerAttack : MonoBehaviour
             lineRenderer.SetPosition(i, pos);
         }
     }
+
+    internal void AddModifier(AttackModifier cardsBuff)
+    {
+        modifierAttackList.Add(cardsBuff);
+    }
 }
 
 [System.Serializable]
@@ -108,6 +113,7 @@ public class Attack
     public float attackDuration = 0.2f;
     public float attackDamage = 1;
     public int circleSegments = 30;
+
 
     public Attack()
     {

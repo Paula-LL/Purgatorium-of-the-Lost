@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuffCards : MonoBehaviour
+public abstract class BuffCards : MonoBehaviour
 {
-    public TarotCardsObject cardsBuff;
+    public virtual void PickUpCard(Collider collision)
+    {
+        Destroy(gameObject);
+        //collision.GetComponent<PlayerAttack>().AddModifier(cardsBuff);
+        //            collision.GetComponent<Player_controller>().AddModifier(cardsBuff2);
+
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player") { 
-        Destroy(gameObject);
-        cardsBuff.Apply(collision.gameObject);
+        if (collision.gameObject.tag == "Player")
+        {
+            PickUpCard(collision);
         }
     }
 }
