@@ -130,6 +130,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 1151251644}
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 57391776}
     - target: {fileID: 698254505719740770, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
       propertyPath: m_Name
       value: Sala1Puerta VariantArri
@@ -179,6 +195,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+--- !u!65 &57391776 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1700927129198560556, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+  m_PrefabInstance: {fileID: 57391775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &72068752 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7351039536664387649, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 2064148475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &149036361 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6942877245681647585, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+  m_PrefabInstance: {fileID: 458909959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &227099498
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +537,17 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &284047955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7142585649761252546, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+  m_PrefabInstance: {fileID: 315980133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &315980133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -514,9 +556,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1818361820864472505, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: -1818361820864472505, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 284047955}
+    - target: {fileID: -1818361820864472505, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1818361820864472505, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1994010413}
     - target: {fileID: 588168719326521608, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
       propertyPath: m_Name
       value: Sala1Puerta VariantAba
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062278924930981894, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7075097
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062278924930981894, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7066991
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062278924930981894, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0018105803
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062278924930981894, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0018488762
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062278924930981894, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 89.948
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062278924930981894, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.299
       objectReference: {fileID: 0}
     - target: {fileID: 5150964178335763461, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -558,11 +640,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 722080543077852845, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+    - {fileID: 2036854802765256414, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+    - {fileID: 7857113542263903670, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+    - {fileID: 9015339459490772866, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5652830858694432969, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499184152}
   m_SourcePrefab: {fileID: 100100000, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+--- !u!65 &338824486 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8619348788241482699, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1588258188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &425143676 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2055894910055709658, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+  m_PrefabInstance: {fileID: 636063387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &451839234
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +701,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3065942282077554567, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: -3065942282077554567, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 1023104292}
+    - target: {fileID: -3065942282077554567, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3065942282077554567, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 998626299}
+    - target: {fileID: -3065942282077554567, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 149036361}
     - target: {fileID: 2594444240942672643, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62
@@ -651,6 +770,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+--- !u!114 &468908196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8762079843740344816, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+  m_PrefabInstance: {fileID: 1499217636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &475616023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5774973146916469151, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 2064148475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &499184147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5652830858694432969, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+  m_PrefabInstance: {fileID: 315980133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &499184152
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499184147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 1
+  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
 --- !u!1001 &514839486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,6 +871,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sala2PuertasEnLinea Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 1669583395}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 2140005309}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 2118637379}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -756,6 +944,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4203028708348524026, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 4203028708348524026, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 475616023}
+    - target: {fileID: 4203028708348524026, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203028708348524026, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 425143676}
+    - target: {fileID: 4203028708348524026, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 930119483}
     - target: {fileID: 6672852833112360153, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
       propertyPath: m_Name
       value: Sala2PuertasEn90Grados Variant
@@ -859,6 +1067,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &717201360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7536006275476543553, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1588258188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &733967763 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3096361609743877303, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 1006110746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &808997266 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2528042228710175516, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 2064148475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &930119483 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8174833298115651965, guid: 9c5a45e48a4cfe946b0e137e1a9ac1b5, type: 3}
+  m_PrefabInstance: {fileID: 636063387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,13 +1179,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.492605, y: 0.50726193, z: -0.50672275, w: 0.4932116}
-  m_LocalPosition: {x: 62.082817, y: 56, z: 98.77948}
+  m_LocalRotation: {x: -0.51696575, y: 0.4825871, z: -0.48419338, w: -0.5151824}
+  m_LocalPosition: {x: 59.132816, y: 45.3, z: 98.47948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 5.887, y: 127.676, z: 2.001}
+  m_LocalEulerAnglesHint: {x: 89.807, y: 454.862, z: -1032.271}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,6 +1220,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &998626299 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4879034835962327898, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+  m_PrefabInstance: {fileID: 458909959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1006110746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1082,11 +1321,74 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sala2PuertasEnLinea Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 1027778930}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 733967763}
+    - target: {fileID: 6919846470628654821, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 1897417369}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+--- !u!114 &1023104292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1980093212379600540, guid: dd0f2d6685d54994dad197ac3b9e942c, type: 3}
+  m_PrefabInstance: {fileID: 458909959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1027778930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2467707285715257134, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 1006110746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1151251644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8762079843740344816, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+  m_PrefabInstance: {fileID: 57391775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1208352220 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1722897252371635309, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+  m_PrefabInstance: {fileID: 1868452092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1286194445 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4819725247484539917, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 2064148475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1308739735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1095,6 +1397,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 1692472899}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1208352220}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 1208352220}
     - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.086258
@@ -1156,6 +1478,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+--- !u!65 &1368232120 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4526684943124946894, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1588258188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1499217636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1164,6 +1491,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 468908196}
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 673339759255062875, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1499217637}
     - target: {fileID: 698254505719740770, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
       propertyPath: m_Name
       value: Sala1Puerta VariantArri (1)
@@ -1213,6 +1556,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+--- !u!65 &1499217637 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1700927129198560556, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+  m_PrefabInstance: {fileID: 1499217636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1588258188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,6 +1569,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2029903497839915164, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: -2029903497839915164, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 717201360}
+    - target: {fileID: -2029903497839915164, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2029903497839915164, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 338824486}
+    - target: {fileID: -2029903497839915164, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 1767753974}
+    - target: {fileID: -2029903497839915164, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+      propertyPath: salaColliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1368232120}
     - target: {fileID: 1782543852169167059, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
       propertyPath: m_Name
       value: Sala3Puertas Variant
@@ -1270,6 +1642,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+--- !u!114 &1669583395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2467707285715257134, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 514839486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1692472899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 187384430934469614, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+  m_PrefabInstance: {fileID: 1868452092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1765597625 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3517839379252214850, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+  m_PrefabInstance: {fileID: 2064148475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1767753974 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3988756158147955226, guid: b3639c99cd1c7594bbf4143948b426e7, type: 3}
+  m_PrefabInstance: {fileID: 1588258188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1868452092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1278,6 +1682,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 1692472899}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5852967501817817594, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1208352220}
     - target: {fileID: 4459227899374327409, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.377045
@@ -1327,6 +1747,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93155b2a765d71a4a8a41ef0e115283a, type: 3}
+--- !u!65 &1897417369 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1886519083139852620, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 1006110746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1994010413 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2546370441268663392, guid: 7cd367b5d9130ef429e4cf533b6167f9, type: 3}
+  m_PrefabInstance: {fileID: 315980133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2064148475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1335,6 +1765,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: camaraDeSala
+      value: 
+      objectReference: {fileID: 475616023}
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: salaColliders.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: salaColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1765597625}
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: salaColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 72068752}
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: salaColliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1286194445}
+    - target: {fileID: -5697780514197859533, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+      propertyPath: salaColliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 808997266}
     - target: {fileID: 2309581954919260429, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
       propertyPath: m_Name
       value: Sala4Puertas Variant
@@ -1384,6 +1842,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78dd470468befc64ea6dcc1c05b6925d, type: 3}
+--- !u!65 &2118637379 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1886519083139852620, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 514839486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2140005309 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3096361609743877303, guid: 2ca7b8e06c13cab49af6bd87d730f402, type: 3}
+  m_PrefabInstance: {fileID: 514839486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
