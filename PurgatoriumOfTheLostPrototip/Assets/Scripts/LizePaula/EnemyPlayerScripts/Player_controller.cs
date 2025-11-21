@@ -143,5 +143,3 @@ public class Movement
         rotationSpeed = movement.rotationSpeed;
     }
 }
-
-

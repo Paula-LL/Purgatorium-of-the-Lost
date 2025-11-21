@@ -8,7 +8,7 @@ public abstract class BuffCards : MonoBehaviour
     {
         Destroy(gameObject);
         //collision.GetComponent<PlayerAttack>().AddModifier(cardsBuff);
-        //            collision.GetComponent<Player_controller>().AddModifier(cardsBuff2);
+        //collision.GetComponent<Player_controller>().AddModifier(cardsBuff2);
 
     }
 

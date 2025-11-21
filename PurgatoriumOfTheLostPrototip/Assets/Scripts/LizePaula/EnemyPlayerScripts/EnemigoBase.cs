@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
@@ -19,6 +20,8 @@ public class EnemyBase : MonoBehaviour
     private float timeInRange = 0f;
     private float lastDamageTime = 0f;
 
+    List<GameObject> enemyList = new List<GameObject>();
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -28,6 +31,9 @@ public class EnemyBase : MonoBehaviour
         {
             player = playerObj.transform;
         }
+
+        enemyList.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        print(enemyList.Count);
     }
 
     void Update()
