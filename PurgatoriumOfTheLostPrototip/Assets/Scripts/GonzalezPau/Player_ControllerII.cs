@@ -36,7 +36,7 @@ public class Player_ControllerII : MonoBehaviour
             // Direcciones
             float x = Input.GetAxisRaw("Horizontal");
             float z = Input.GetAxisRaw("Vertical");
-            moveDirection = new Vector3(x, 0, z).normalized;
+            moveDirection = new Vector3(z, 0, -x).normalized;
 
             // Rotar hacia la dirección de movimiento
             if (moveDirection != Vector3.zero)
