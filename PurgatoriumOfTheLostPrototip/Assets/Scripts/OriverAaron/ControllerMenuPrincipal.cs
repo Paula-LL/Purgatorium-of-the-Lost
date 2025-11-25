@@ -12,7 +12,7 @@ public class ControllerMenuPrincipal : MonoBehaviour
     [SerializeField] private Button botonSalir;
 
     [Header("Configuración de Escena")]
-    [SerializeField] private string nombreEscena = "NombreDeTuEscena";
+    [SerializeField] private string nombreEscena = "Menu";
 
     [Header("Configuración de Canvas")]
     [SerializeField] private Canvas canvasActivar;

@@ -31,6 +31,7 @@ public class MenuPausaController : MonoBehaviour
 
     [Header("SCENE MANAGEMENT")]
     public string escenaMenu = "Menu";
+    public string escenaVictoria = "Victoria";
 
     private static MenuPausaController instance;
     private bool ajustesCargados = false;
@@ -39,6 +40,12 @@ public class MenuPausaController : MonoBehaviour
     {
         // Verificar si estamos en la escena específica donde debe destruirse
         if (SceneManager.GetActiveScene().name == escenaMenu)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        if (SceneManager.GetActiveScene().name == escenaVictoria)
         {
             Destroy(gameObject);
             return;
@@ -150,7 +157,6 @@ public class MenuPausaController : MonoBehaviour
 
     void CargarAjustesGuardados()
     {
-        Debug.Log("Cargando ajustes guardados...");
 
         if (volumenSliderMusica != null)
         {
