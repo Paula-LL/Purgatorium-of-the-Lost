@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sala1Puerta VariantArri
       objectReference: {fileID: 0}
+    - target: {fileID: 1700927129198560556, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5107869444311260271, guid: 1e946739d20469d4e8cb75634a9ec677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 111.6
@@ -475,8 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b92843ed3eecff41b855dfea4651a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  dashSpeed: 20
+  moveSpeed: 20
+  dashSpeed: 40
   dashDuration: 0.5
   rotationSpeed: 10
   maxHealth: 5
