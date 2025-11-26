@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemiesKilledController : MonoBehaviour
 {
-   List<GameObject> listOfOpponents = new List<GameObject>();
+   List<EnemigoBase> listOfOpponents = new List<EnemigoBase>();
+
+    public GameObject cardReward;
+    public Transform spawnPoint;
 
     void Start()
     {
-        listOfOpponents.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
+        listOfOpponents.AddRange(EnemigoBase.enemyList);
         print(listOfOpponents.Count);
     }
 
-    public void KilledOpponent(GameObject enemy)
+    public void KilledOpponent(EnemigoBase enemy)
     {
         if (listOfOpponents.Contains(enemy))
         {
@@ -20,6 +23,11 @@ public class EnemiesKilledController : MonoBehaviour
         }
 
         print(listOfOpponents.Count);
+
+        if (AreOpponentsDead())
+        {
+            SpawnReward();
+        }
     }
 
     public bool AreOpponentsDead()
@@ -35,5 +43,19 @@ public class EnemiesKilledController : MonoBehaviour
             Debug.Log("Alive");
             return false;
         }
+    }
+
+    void SpawnReward()
+    {
+        if (cardReward == null)
+        {
+            Debug.LogWarning("No reward prefab assigned!");
+            return;
+        }
+
+        Vector3 pos = spawnPoint ? spawnPoint.position : transform.position;
+        Instantiate(cardReward, pos, Quaternion.identity);
+
+        Debug.Log("Reward spawned");
     }
 }

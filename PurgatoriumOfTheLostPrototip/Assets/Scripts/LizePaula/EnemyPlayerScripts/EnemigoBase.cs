@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour
+public class EnemigoBase : MonoBehaviour
 {
     [Header("Follow Settings")]
     [SerializeField] private string playerTag = "Player";
@@ -20,7 +21,7 @@ public class EnemyBase : MonoBehaviour
     private float timeInRange = 0f;
     private float lastDamageTime = 0f;
 
-    List<GameObject> enemyList = new List<GameObject>();
+    public static List<EnemigoBase> enemyList = new List<EnemigoBase>();
 
     void Start()
     {
@@ -31,9 +32,12 @@ public class EnemyBase : MonoBehaviour
         {
             player = playerObj.transform;
         }
+    }
 
-        enemyList.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
-        print(enemyList.Count);
+    public void Awake()
+    {
+        enemyList.Add(this);
+        Debug.Log("Enemies in list: " + enemyList.Count);
     }
 
     void Update()
@@ -100,6 +104,8 @@ public class EnemyBase : MonoBehaviour
     void Die()
     {
         Debug.Log($"{gameObject.name} has died.");
+        enemyList.Remove(this);
+        FindObjectOfType<EnemiesKilledController>()?.KilledOpponent(this);
         Destroy(gameObject);
     }
 

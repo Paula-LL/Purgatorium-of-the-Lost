@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour
     private LineRenderer lineRenderer;
     public List<AttackModifier> modifierAttackList = new List<AttackModifier>();
 
-
+     
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -77,7 +77,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (col.CompareTag("Enemy"))
             {
-                EnemyBase enemy = col.GetComponent<EnemyBase>();
+                EnemigoBase enemy = col.GetComponent<EnemigoBase>();
                 if (enemy != null)
                 {
                     enemy.TakeDamage(attack.attackDamage);
