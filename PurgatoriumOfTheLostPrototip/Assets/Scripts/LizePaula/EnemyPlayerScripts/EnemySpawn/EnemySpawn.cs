@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject enemy;
-    public Transform enemySpawnPos;
-
+    public Transform enemySpawnPos1;
+    public Transform enemySpawnPos2; 
+    public Transform enemySpawnPos3; 
+    public Transform enemySpawnPos4;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -19,7 +21,10 @@ public class EnemySpawn : MonoBehaviour
     }
 
     void EnemySpawner() {
-        Instantiate(enemy, enemySpawnPos.position, enemySpawnPos.rotation);
+        Instantiate(enemy, enemySpawnPos1.position, enemySpawnPos1.rotation);
+        Instantiate(enemy, enemySpawnPos2.position, enemySpawnPos2.rotation);
+        Instantiate(enemy, enemySpawnPos3.position, enemySpawnPos3.rotation); 
+        Instantiate(enemy, enemySpawnPos4.position, enemySpawnPos4.rotation);
         Debug.Log("Enemy Spawned");
     }
 }

@@ -2,27 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiesKilledController : MonoBehaviour
+public class EnemiesController : MonoBehaviour
 {
-   List<EnemigoBase> listOfOpponents = new List<EnemigoBase>();
+    static EnemiesController enemiesController;
+    public static EnemiesController instance
+    {
+        get
+        {
+            if (enemiesController == null) enemiesController = FindObjectOfType<EnemiesController>();
+            return enemiesController;
+        }
+    }
+    public List<EnemigoBase> enemyList = new List<EnemigoBase>();
 
     public GameObject cardReward;
     public Transform spawnPoint;
 
     void Start()
     {
-        listOfOpponents.AddRange(EnemigoBase.enemyList);
-        print(listOfOpponents.Count);
+        print(enemyList.Count);
     }
 
     public void KilledOpponent(EnemigoBase enemy)
     {
-        if (listOfOpponents.Contains(enemy))
+        if (enemyList.Contains(enemy))
         {
-            listOfOpponents.Remove(enemy);
+            enemyList.Remove(enemy);
         }
 
-        print(listOfOpponents.Count);
+        print(enemyList.Count);
 
         if (AreOpponentsDead())
         {
@@ -32,7 +40,7 @@ public class EnemiesKilledController : MonoBehaviour
 
     public bool AreOpponentsDead()
     {
-        if (listOfOpponents.Count <= 0)
+        if (enemyList.Count <= 0)
         {
             Debug.Log("Dead");
 

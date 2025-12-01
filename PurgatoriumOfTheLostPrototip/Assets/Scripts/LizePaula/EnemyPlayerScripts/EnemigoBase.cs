@@ -21,8 +21,6 @@ public class EnemigoBase : MonoBehaviour
     private float timeInRange = 0f;
     private float lastDamageTime = 0f;
 
-    public static List<EnemigoBase> enemyList = new List<EnemigoBase>();
-
     void Start()
     {
         currentHealth = maxHealth;
@@ -36,8 +34,8 @@ public class EnemigoBase : MonoBehaviour
 
     public void Awake()
     {
-        enemyList.Add(this);
-        Debug.Log("Enemies in list: " + enemyList.Count);
+        EnemiesController.instance.enemyList.Add(this);
+        Debug.Log("Enemies in list: " + EnemiesController.instance.enemyList.Count);
     }
 
     void Update()
@@ -104,8 +102,7 @@ public class EnemigoBase : MonoBehaviour
     void Die()
     {
         Debug.Log($"{gameObject.name} has died.");
-        enemyList.Remove(this);
-        FindObjectOfType<EnemiesKilledController>()?.KilledOpponent(this);
+        EnemiesController.instance.KilledOpponent(this);
         Destroy(gameObject);
     }
 
