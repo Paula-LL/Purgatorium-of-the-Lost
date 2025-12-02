@@ -2812,7 +2812,7 @@ MonoBehaviour:
   botonInicio: {fileID: 428320565}
   botonAjustes: {fileID: 1978839007}
   botonSalir: {fileID: 1006007292}
-  nombreEscena: Victoria
+  nombreEscena: Mapa
   canvasActivar: {fileID: 95906221}
   canvasDesactivar: {fileID: 819859367}
 --- !u!1 &1282711901
