@@ -4,6 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+=======
+  - TarotCard
+>>>>>>> Player
   - Enemy
   layers:
   - Default

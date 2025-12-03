@@ -160,7 +160,12 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
+<<<<<<< HEAD
   applicationIdentifier: {}
+=======
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.PurgatoriumOfTheLostPrototip
+>>>>>>> Player
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -941,7 +946,11 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
+<<<<<<< HEAD
   activeInputHandler: 0
+=======
+  activeInputHandler: 2
+>>>>>>> Player
   windowsGamepadBackendHint: 0
   cloudProjectId: 583cf75c-e974-4caa-8ecd-b46016136200
   framebufferDepthMemorylessMode: 0
