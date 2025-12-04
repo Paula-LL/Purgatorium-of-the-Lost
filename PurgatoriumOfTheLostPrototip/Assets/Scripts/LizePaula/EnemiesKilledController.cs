@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class EnemiesKilledController : MonoBehaviour
 {
-   List<EnemigoBase> listOfOpponents = new List<EnemigoBase>();
+    List<EnemigoBase> listOfOpponents = new List<EnemigoBase>();
 
     public GameObject cardReward;
     public Transform spawnPoint;
 
+    public void RegisterSpawnedEnemies(List<EnemigoBase> enemies)
+    {
+        listOfOpponents.Clear();
+        listOfOpponents.AddRange(enemies);
+    }
+
+    public void OnAllSpawnedEnemiesDead()
+    {
+        SpawnReward();
+    }
+
     void Start()
     {
-        listOfOpponents.AddRange(EnemigoBase.enemyList);
-        print(listOfOpponents.Count);
+        if (listOfOpponents.Count == 0)
+        {
+            listOfOpponents.AddRange(EnemigoBase.enemyList);
+        }
     }
 
     public void KilledOpponent(EnemigoBase enemy)
@@ -22,8 +35,6 @@ public class EnemiesKilledController : MonoBehaviour
             listOfOpponents.Remove(enemy);
         }
 
-        print(listOfOpponents.Count);
-
         if (AreOpponentsDead())
         {
             SpawnReward();
@@ -32,30 +43,14 @@ public class EnemiesKilledController : MonoBehaviour
 
     public bool AreOpponentsDead()
     {
-        if (listOfOpponents.Count <= 0)
-        {
-            Debug.Log("Dead");
-
-            return true;
-        }
-        else
-        {
-            Debug.Log("Alive");
-            return false;
-        }
+        return listOfOpponents.Count <= 0;
     }
 
     void SpawnReward()
     {
-        if (cardReward == null)
-        {
-            Debug.LogWarning("No reward prefab assigned!");
-            return;
-        }
+        if (cardReward == null) return;
 
         Vector3 pos = spawnPoint ? spawnPoint.position : transform.position;
         Instantiate(cardReward, pos, Quaternion.identity);
-
-        Debug.Log("Reward spawned");
     }
 }

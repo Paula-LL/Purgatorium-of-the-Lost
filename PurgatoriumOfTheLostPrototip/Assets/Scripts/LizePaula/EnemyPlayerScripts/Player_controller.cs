@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player_controller : MonoBehaviour
@@ -12,6 +13,10 @@ public class Player_controller : MonoBehaviour
     [Header("Vida")]
     public int maxHealth = 5;
     private int currentHealth;
+
+    [Header("Muerte")]
+    public string sceneOnDeath = "GameOver";
+    public float deathDelay = 2f;
 
     [Header("SFX")]
     public AudioClip footstepSFX;
@@ -148,6 +153,8 @@ public class Player_controller : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (isDead) return;
+
         currentHealth -= amount;
         Debug.Log($"Jugador recibe {amount} de daño. Vida actual: {currentHealth}/{maxHealth}");
         if (currentHealth <= 0)
@@ -163,14 +170,29 @@ public class Player_controller : MonoBehaviour
         audioSource.PlayOneShot(deathSFX);
 
         anim.SetBool("IsDead", true);
+
+        // Desactivar controles
+        controller.enabled = false;
+
+        // Iniciar corrutina de muerte
         StartCoroutine(DeathRoutine());
     }
 
-
     System.Collections.IEnumerator DeathRoutine()
     {
-        yield return new WaitForSeconds(6f);
-        Destroy(gameObject);
+        // Esperar el tiempo de la animación de muerte
+        yield return new WaitForSeconds(deathDelay);
+
+        // Cargar la escena asignada
+        if (!string.IsNullOrEmpty(sceneOnDeath))
+        {
+            SceneManager.LoadScene(sceneOnDeath);
+        }
+        else
+        {
+            Debug.LogWarning("No se ha asignado nombre de escena para cargar al morir");
+            Destroy(gameObject);
+        }
     }
 
     internal void AddModifier(MovementModifier cardsBuff)

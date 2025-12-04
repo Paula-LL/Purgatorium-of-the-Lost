@@ -17,21 +17,16 @@ public class PuertaFSM : MonoBehaviour
     public float distanciaApertura = 3f;
     public float velocidadMovimiento = 2f;
 
-    [Header("Auto-cierre")]
-    public float tiempoAutoCierre = 5f;
-
     [Header("Audio")]
-    public AudioClip sonidoPuerta; 
+    public AudioClip sonidoPuerta;
     private AudioSource audioSource;
 
     private Vector3 posicionInicial;
-    private float temporizador = 0f;
 
     void Start()
     {
         posicionInicial = portaTransform.localPosition;
 
-        
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
@@ -42,6 +37,14 @@ public class PuertaFSM : MonoBehaviour
     void Update()
     {
         UpdateState(estatActual);
+    }
+
+    public void AbrirCuandoEnemigosMueren()
+    {
+        if (estatActual == EstatPorta.Tancada)
+        {
+            AbrirPuerta();
+        }
     }
 
     public void AbrirPuerta()
@@ -60,7 +63,6 @@ public class PuertaFSM : MonoBehaviour
         {
             case EstatPorta.Oberta:
                 portaTransform.localPosition = posicionInicial + Vector3.up * distanciaApertura;
-                temporizador = 0f;
                 break;
 
             case EstatPorta.Tancada:
@@ -79,13 +81,7 @@ public class PuertaFSM : MonoBehaviour
         switch (estat)
         {
             case EstatPorta.Oberta:
-                temporizador += Time.deltaTime;
-                if (temporizador >= tiempoAutoCierre)
-                {
-                    ExitState(estatActual);
-                    estatActual = EstatPorta.Tancant;
-                    EnterState(estatActual);
-                }
+                // La puerta permanece abierta
                 break;
 
             case EstatPorta.Tancada:
@@ -123,7 +119,7 @@ public class PuertaFSM : MonoBehaviour
 
     private void ExitState(EstatPorta estat)
     {
-       
+
     }
 
     private void ReproducirSonido()
