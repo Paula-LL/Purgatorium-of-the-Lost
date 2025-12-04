@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -32,6 +33,7 @@ public class Player_controller : MonoBehaviour
     private Animator anim;
 
     public List<MovementModifier> modifierMovementList = new List<MovementModifier>();
+    public TextMeshProUGUI vidaPlayer;
 
     bool isDead = false;
 
@@ -55,6 +57,8 @@ public class Player_controller : MonoBehaviour
 
         HandleMovement();
         HandleAttack();
+
+        vidaPlayer.text = currentHealth.ToString();
     }
 
     void HandleMovement()
@@ -65,12 +69,12 @@ public class Player_controller : MonoBehaviour
         if (pad != null)
         {
             Vector2 stick = pad.leftStick.ReadValue();
-            moveInput = new Vector3(stick.x, 0, stick.y);
+            moveInput = new Vector3(stick.y, 0, -(stick.x));
         }
 
         float x = Input.GetKey(KeyCode.D) ? 1 : Input.GetKey(KeyCode.A) ? -1 : 0;
         float z = Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0;
-        Vector3 keyboardInput = new Vector3(x, 0, z);
+        Vector3 keyboardInput = new Vector3(z, 0, -x);
 
         moveDirection = moveInput.sqrMagnitude > 0 ? moveInput.normalized : keyboardInput.normalized;
         anim.SetFloat("Speed", moveDirection.magnitude);
